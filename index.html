@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="land.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthGuard - Your Health Insurance Partner</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">HealthGuard</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>HealthGuard</h1>
+        <p>Your Trusted Partner in Health Insurance Planning and Protection</p>
+    </section>
+
+    <!-- Health Info Section -->
+    <section class="health-info">
+        <div class="health-content">
+            <h2>Why Your Health Matters</h2>
+            <p>Health is not just the absence of disease—it's a state of complete physical, mental, and social well-being. Your health is your most valuable asset, enabling you to pursue your dreams, care for your loved ones, and enjoy life's precious moments.</p>
+            <p>Good health allows you to be productive, maintain relationships, and experience joy. It's the foundation upon which you build your future and create lasting memories with those who matter most.</p>
+            <p>Investing in your health today through proper insurance coverage ensures you're protected against unexpected medical expenses, allowing you to focus on what truly matters—living your best life without financial worry.</p>
+        </div>
+        <div class="health-visual">
+            <svg width="300" height="300" viewBox="0 0 300 300">
+                <defs>
+                    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <g class="heart-container" transform="translate(150, 150)">
+                    <path d="M0,-40 C-10,-50 -25,-50 -35,-40 C-45,-30 -45,-15 -35,-5 L0,35 L35,-5 C45,-15 45,-30 35,-40 C25,-50 10,-50 0,-40 Z" 
+                        fill="url(#heartGradient)" 
+                        stroke="white" 
+                        stroke-width="3"/>
+                    <circle cx="0" cy="0" r="3" fill="white">
+                        <animate attributeName="r" values="3;5;3" dur="1s" repeatCount="indefinite"/>
+                    </circle>
+                    <line x1="-30" y1="0" x2="30" y2="0" stroke="white" stroke-width="2" opacity="0.6">
+                        <animate attributeName="x2" values="30;-30;30" dur="2s" repeatCount="indefinite"/>
+                    </line>
+                </g>
+                <g transform="translate(250, 150)">
+                    <path d="M 0,0 Q 10,-10 0,-20 Q -10,-10 0,0" fill="none" stroke="#667eea" stroke-width="2">
+                        <animateTransform attributeName="transform" type="translate" values="0,0; 20,0; 40,0" dur="1.5s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="1;0" dur="1.5s" repeatCount="indefinite"/>
+                    </path>
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <a href="price-predictor.html" class="service-card" target="_blank">
+                <div class="icon">💰</div>
+                <h3>Medical Insurance Price Predictor</h3>
+                <p>Get accurate estimates for your health insurance premiums based on your personal health profile. Our AI-powered tool analyzes multiple factors to provide you with reliable cost predictions.</p>
+                <span class="btn">Start Prediction →</span>
+            </a>
+
+            <a href="claim-predictor.html" class="service-card" target="_blank">
+                <div class="icon">📋</div>
+                <h3>Health Insurance Claim Predictor</h3>
+                <p>Predict the likelihood of your insurance claim approval. Understand what factors influence claim decisions and get insights to improve your chances of successful claims.</p>
+                <span class="btn">Check Claims →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 HealthGuard. Empowering you with intelligent health insurance solutions.</p>
+        <p style="margin-top: 10px; opacity: 0.6;">Predictions are for informational purposes only. Please consult with insurance professionals for final decisions.</p>
+    </footer>
+</body>
+</html>

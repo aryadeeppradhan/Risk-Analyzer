@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Insurance Price Predictor - HealthGuard</title>
+    <link rel="stylesheet" href="price.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">🏥 HealthGuard</div>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>💰 Medical Insurance Price Predictor</h1>
+        <p>Get accurate estimates for your health insurance premiums</p>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <h2>Understanding Health Insurance Costs</h2>
+            <p>Health insurance premiums are calculated based on various factors including your age, health status, lifestyle choices, and location. Our advanced machine learning model analyzes these factors to provide you with an accurate estimate of your potential insurance costs. This helps you plan your finances better and choose the right insurance coverage for your needs.</p>
+        </div>
+    </div>
+
+    <div class="predictor-container">
+        <div class="form-card">
+            <h2>Enter Your Information</h2>
+            
+            <form id="predictionForm">
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" min="18" max="100" value="25" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Body Metrics</label>
+                    <div class="bmi-group">
+                        <div>
+                            <label for="weight" style="font-size: 0.9em; margin-bottom: 5px;">Weight (kg)</label>
+                            <input type="number" id="weight" min="30" max="200" step="0.1" value="70" required>
+                        </div>
+                        <div>
+                            <label for="height" style="font-size: 0.9em; margin-bottom: 5px;">Height (cm)</label>
+                            <input type="number" id="height" min="100" max="250" step="0.1" value="170" required>
+                        </div>
+                        <div>
+                            <label style="font-size: 0.9em; margin-bottom: 5px;">BMI</label>
+                            <div class="bmi-display" id="bmiDisplay">24.2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="smoker">Smoker</label>
+                        <select id="smoker" required>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="children">Number of Children</label>
+                        <input type="number" id="children" min="0" max="10" value="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="region">Region</label>
+                    <select id="region" required>
+                        <option value="southwest">Southwest</option>
+                        <option value="northwest">Northwest</option>
+                        <option value="northeast">Northeast</option>
+                        <option value="southeast">Southeast</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-predict" id="predictBtn">Calculate Insurance Cost</button>
+            </form>
+
+            <div id="result" class="result">
+                <h3>Estimated Annual Premium</h3>
+                <div class="amount" id="predictedAmount">$0.00</div>
+                
+                <div class="suggestions" id="suggestions">
+                    <h4>💡 Personalized Suggestions</h4>
+                    <ul id="suggestionsList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 HealthGuard. Estimates are for informational purposes only.</p>
+    </footer>
+    <script src="pricecal.js"></script>
+</body>
+</html>
